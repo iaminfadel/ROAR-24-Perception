@@ -9,7 +9,7 @@
   <joint name="base_joint" type="fixed">
       <parent link="world"/>
       <child link="base_link"/>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.17"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 1.205"/>
   </joint>
 
   <link
@@ -39,7 +39,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="1 0.674 0.109 1" />
       </material>
     </visual>
     <collision>
@@ -79,7 +79,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.803 0.498 0.196 1" />
       </material>
     </visual>
     <collision>
@@ -137,7 +137,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.855 0.6274 0.4274 1" />
       </material>
     </visual>
     <collision>
@@ -195,7 +195,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.8 0.33333 0 1" />
       </material>
     </visual>
     <collision>
@@ -253,7 +253,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.9317 0.4549 0.3176 1" />
       </material>
     </visual>
     <collision>
@@ -311,7 +311,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0.949 0.549 0.1568 1" />
       </material>
     </visual>
     <collision>
@@ -369,7 +369,7 @@
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="1 0.498 0.3137 1" />
       </material>
     </visual>
     <collision>
@@ -428,7 +428,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.8941 0.6078 0.0588 1" />
       </material>
     </visual>
     <collision>
@@ -489,7 +489,7 @@
       <material
         name="">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.7529 0.2509 0 1" />
       </material>
     </visual>
     <collision>
@@ -677,7 +677,7 @@
       <grip_count_threshold>3</grip_count_threshold>
       <max_grip_count>10</max_grip_count>
       <release_tolerance>0.004</release_tolerance>
-      <disable_collisions_on_attach>true</disable_collisions_on_attach>
+      <disable_collisions_on_attach>false</disable_collisions_on_attach>
       <contact_topic>__default_topic__</contact_topic>
     </plugin> 
   </gazebo>
