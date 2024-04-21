@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro"
+       name="ur3" >
+
+  <link name="base_link" >
+  </link>
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.84" rpy="0.0 0.0 0.0" />
+  </joint>
+
+
+  <xacro:include filename="$(find maintenance_task_simulation)/urdf/cell.xacro" />
+  <xacro:cell />
+
+  <xacro:include filename="$(find maintenance_task_simulation)/urdf/box.xacro" />
+  <xacro:box />
+
+  <xacro:include filename="$(find maintenance_task_simulation)/urdf/imu.xacro" />
+  <xacro:imu />
+
+  <xacro:include filename="$(find maintenance_task_simulation)/urdf/button.xacro" />
+  <xacro:button />
+
+
+
+</robot>

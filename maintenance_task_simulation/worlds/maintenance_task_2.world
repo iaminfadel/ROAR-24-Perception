@@ -1,0 +1,502 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='panel'>
+      <joint name='cela_black_joint' type='fixed'>
+        <pose relative_to='__model__'>-0.2 0 0.7 0 0 -1.5708</pose>
+        <parent>world</parent>
+        <child>cela_black</child>
+      </joint>
+      <link name='cela_black'>
+        <pose relative_to='cela_black_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>10</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='cela_black_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/cell/ERC2022_cela_black.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='cela_black_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/cell/ERC2022_cela_black.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='cela_white_joint' type='fixed'>
+        <pose relative_to='__model__'>-0.2 0 0.7 0 0 -1.5708</pose>
+        <parent>world</parent>
+        <child>cela_white</child>
+      </joint>
+      <link name='cela_white'>
+        <pose relative_to='cela_white_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>10</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='cela_white_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/cell/ERC2022_cela_white.dae</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='cela_white_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/cell/ERC2022_cela_white.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/White</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='world_joint' type='fixed'>
+        <pose relative_to='__model__'>0 0 1.4 0 -0 0</pose>
+        <parent>world</parent>
+        <child>base_link</child>
+      </joint>
+      <link name='base_link'>
+        <pose relative_to='world_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>2.04371 -0.228571 0.903571 0 -0 0</pose>
+          <mass>70</mass>
+          <inertia>
+            <ixx>102.198</ixx>
+            <ixy>10.2826</ixy>
+            <ixz>-21.7286</ixz>
+            <iyy>60.2949</iyy>
+            <iyz>17.6679</iyz>
+            <izz>82.8824</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_fixed_joint_lump__box_bottom_collision'>
+          <pose>1.908 -1.45 0.85 0 0 -1.88496</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/box/ERC2022_box_bottom.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__box_top_collision_1'>
+          <pose>1.908 -1.45 0.85 0 0 -1.88496</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/box/ERC2022_box_top.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__button1_collision_2'>
+          <pose>2.385 0.3 1.75 1.5707 -0 -1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/button/ERC2022_button_ID1.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__button2_collision_3'>
+          <pose>2.385 -0.3 1.75 1.5707 -0 -1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/button/ERC2022_button_ID2.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__button3_collision_4'>
+          <pose>2.385 0.3 0.85 1.5707 -0 -1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/button/ERC2022_button_ID3.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__button4_collision_5'>
+          <pose>2.385 -0.3 0.85 1.5707 -0 -1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/button/ERC2022_button_ID4.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__imu_collision_6'>
+          <pose>0.95 1.29999 -0.7 -0.000139 4.6e-05 1.57084</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/imu/ERC2022_IMU.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='base_link_fixed_joint_lump__box_bottom_visual'>
+          <pose>1.908 -1.45 0.85 0 0 -1.88496</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/box/ERC2022_box_bottom.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__box_top_visual_1'>
+          <pose>1.908 -1.45 0.85 0 0 -1.88496</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/box/ERC2022_box_top.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__button1_visual_2'>
+          <pose>2.385 0.3 1.75 1.5707 -0 -1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/button/ERC2022_button_ID1.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__button2_visual_3'>
+          <pose>2.385 -0.3 1.75 1.5707 -0 -1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/button/ERC2022_button_ID2.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__button3_visual_4'>
+          <pose>2.385 0.3 0.85 1.5707 -0 -1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/button/ERC2022_button_ID3.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__button4_visual_5'>
+          <pose>2.385 -0.3 0.85 1.5707 -0 -1.5707</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/button/ERC2022_button_ID4.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__imu_visual_6'>
+          <pose>0.95 1.29999 -0.7 -0.000139 4.6e-05 1.57084</pose>
+          <geometry>
+            <mesh>
+              <scale>0.005 0.005 0.005</scale>
+              <uri>/home/abdelrahman/Desktop/GP_ROAR_WS/src/Robotic-Manipulator-Simulation/maintenance_task_simulation/meshes/imu/ERC2022_IMU.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>35 407000000</sim_time>
+      <real_time>37 555107387</real_time>
+      <wall_time>1713630460 512282579</wall_time>
+      <iterations>35407</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='panel'>
+        <pose>0 -0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>0 -0 1.4 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -0 0 -0 0</acceleration>
+          <wrench>0 0 -0 0 -0 0</wrench>
+        </link>
+        <link name='cela_black'>
+          <pose>-0.2 0 0.7 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -0 0 -0 0</acceleration>
+          <wrench>0 0 -0 0 -0 0</wrench>
+        </link>
+        <link name='cela_white'>
+          <pose>-0.2 -0 0.7 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -0 0 -0 0</acceleration>
+          <wrench>0 0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-12.5699 -3.82353 11.4258 0 0.671643 0.360193</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>
