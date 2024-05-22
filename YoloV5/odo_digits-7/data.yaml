@@ -1,0 +1,22 @@
+names:
+- '0'
+- '1'
+- '10'
+- '2'
+- '3'
+- '4'
+- '5'
+- '6'
+- '7'
+- '8'
+- '9'
+nc: 11
+roboflow:
+  license: MIT
+  project: odo_digits
+  url: https://universe.roboflow.com/digits-6q2i9/odo_digits/dataset/7
+  version: 7
+  workspace: digits-6q2i9
+test: ../test/images
+train: odo_digits-7/train/images
+val: odo_digits-7/valid/images
