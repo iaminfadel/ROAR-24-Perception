@@ -1,0 +1,16 @@
+<launch>
+  <!-- Start Gazebo with GUI -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false"/>
+    <arg name="gui" value="true"/>
+  </include>
+
+  <!-- Load URDF model -->
+  <arg name="xacro_file" default="$(find arm_urdf)/urdf/maintenance_sim.urdf.xacro"/>
+  <param name="robot_description" command="$(find xacro)/xacro $(arg xacro_file)"/>
+
+  <!-- Spawn URDF model -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model panel -param robot_description -x 0 -y 0 -z 0"/>
+  
+  
+</launch>
