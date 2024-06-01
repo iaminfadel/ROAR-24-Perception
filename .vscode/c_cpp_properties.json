@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/nvidia/roar_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/nvidia/roar_ws/src/JetsonTX2_WS/localization/include/**",
+        "/home/nvidia/roar_ws/src/JetsonTX2_WS/roscan/rosserial/rosserial_server/include/**",
+        "/home/nvidia/roar_ws/src/JetsonTX2_WS/roscan/rosserial/rosserial_test/include/**",
+        "/home/nvidia/roar_ws/src/JetsonTX2_WS/roscan/socketcan_bridge/include/**",
+        "/home/nvidia/roar_ws/src/JetsonTX2_WS/roscan/socketcan_interface/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
