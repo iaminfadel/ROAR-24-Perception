@@ -244,8 +244,8 @@ class BoundingBoxExtractor:
 
 class BoundingBoxExtractor_Maually:
     def __init__(self, ):
-        right_img = cv2.imread('/home/omar/RobotArmPerception/cameraSim/src/arm_urdf/real_life_images/right image0.png')
-        left_img = cv2.imread('/home/omar/RobotArmPerception/cameraSim/src/arm_urdf/real_life_images/left image3.png')
+        right_img = cv2.imread('/home/omar/robotarm_ws/src/Robotic-Manipulator-Simulation/real_life_images/right image0.png')
+        left_img = cv2.imread('/home/omar/robotarm_ws/src/Robotic-Manipulator-Simulation/real_life_images/left image3.png')
         self.imgs = [('left_image', left_img), ('right_image', right_img)]
         self.label_with_coordinates = {}
         self.threshold = 0.5
