@@ -9,6 +9,7 @@ Welcome to the Robotic Manipulator Simulation Workspace. This repository feature
 - [Installation](#installation)
 - [Results](#results)
 - [Notes](#notes)
+- [RQT Graph](#rqt)
 
 ## Features
 - **Teleoperation Mode**: Which we control the arm in the simulation using a joystick and the motion is done with inverse kinematics with MoveIt.
@@ -90,3 +91,6 @@ rostopic echo /choosen_pose_stamp
 and then subscribe from the topic **/choosen_pose_stamp**.
 
 - We can't publish from the GUI when it opens directely we have to wait for one or two minutes. it can be handeled to avoid the wait process through editing the launch file but I'm too lazy right now.
+
+## RQT Graph
+![Alt text](./scripts_fin/rosgraph.png)
