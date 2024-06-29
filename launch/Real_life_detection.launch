@@ -1,0 +1,22 @@
+<launch>
+
+  <!-- Default value for run_arm_urdf is false -->
+  <arg name="run_world" default="false" />
+  
+  <group if="$(arg run_world)">
+    <include file="$(find arm_urdf)/launch/arm_urdf.launch" />
+  </group>
+  
+  <!-- Launch cameras_capture.py -->
+  <node name="capture_node" pkg="arm_urdf" type="cameras_capture.py"  />
+  <!-- <node name="cam_cap_pub_node" pkg="arm_urdf" type="cam_cap_pub.py" output="screen" /> -->
+
+  <!-- Launch subscribe_detect.py -->
+  <node name="subscribe_detect" pkg="arm_urdf" type="subscribe_detect.py"  />
+
+  <!-- Launch calc_pub.py -->
+  <node name="calc_pub" pkg="arm_urdf" type="calc_pub.py"/>
+
+
+
+</launch>
