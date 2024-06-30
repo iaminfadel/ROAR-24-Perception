@@ -25,6 +25,33 @@
       <origin xyz="1.431 0.18 1.05" rpy="1.5707 0.0 -1.5707"/>
     </joint>
 
+    <link name="number1">
+      <visual>
+        <geometry>
+          <mesh filename="package://maintenance_task_simulation/meshes/numbers/one.dae" scale="0.0006 0.0006 0.0006"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://maintenance_task_simulation/meshes/numbers/one.dae" scale="0.0006 0.0006 0.0006"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="10" />
+        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      </inertial>
+    </link>
+
+    <joint name="number1_joint" type="fixed">
+      <parent link="button1"/>
+      <child link="number1"/>
+      <origin xyz="0 0 0.07" rpy="0 0.0 0"/>
+    </joint>
+    
+    <gazebo reference="number1">
+      <material>Gazebo/Black</material>
+    </gazebo>
+
     <link name="button2">
       <visual>
         <geometry>
@@ -47,6 +74,33 @@
       <child link="button2"/>
       <origin xyz="1.431 -0.18 1.05" rpy="1.5707 0.0 -1.5707"/>
     </joint>
+    
+    <link name="number5">
+      <visual>
+        <geometry>
+          <mesh filename="package://maintenance_task_simulation/meshes/numbers/five.dae" scale="0.0006 0.0006 0.0006"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://maintenance_task_simulation/meshes/numbers/five.dae" scale="0.0006 0.0006 0.0006"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="10" />
+        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      </inertial>
+    </link>
+
+    <joint name="number5_joint" type="fixed">
+      <parent link="button2"/>
+      <child link="number5"/>
+      <origin xyz="0 0 0.07" rpy="0 0.0 0"/>
+    </joint>
+    
+    <gazebo reference="number5">
+      <material>Gazebo/Black</material>
+    </gazebo>
 
     <link name="button3">
       <visual>
@@ -70,6 +124,33 @@
       <child link="button3"/>
       <origin xyz="1.431 0.18 0.51" rpy="1.5707 0.0 -1.5707"/>
     </joint>
+    
+    <link name="number8">
+      <visual>
+        <geometry>
+          <mesh filename="package://maintenance_task_simulation/meshes/numbers/eight.dae" scale="0.0006 0.0006 0.0006"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://maintenance_task_simulation/meshes/numbers/eight.dae" scale="0.0006 0.0006 0.0006"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="10" />
+        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      </inertial>
+    </link>
+
+    <joint name="number8_joint" type="fixed">
+      <parent link="button3"/>
+      <child link="number8"/>
+      <origin xyz="0 0 0.07" rpy="0 0.0 0"/>
+    </joint>
+    
+    <gazebo reference="number8">
+      <material>Gazebo/Black</material>
+    </gazebo>
 
     <link name="button4">
       <visual>
@@ -93,6 +174,33 @@
       <child link="button4"/>
       <origin xyz="1.431 -0.18 0.51" rpy="1.5707 0.0 -1.5707"/>
     </joint>
+    
+    <link name="number3">
+      <visual>
+        <geometry>
+          <mesh filename="package://maintenance_task_simulation/meshes/numbers/three.dae" scale="0.0006 0.0006 0.0006"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://maintenance_task_simulation/meshes/numbers/three.dae" scale="0.0006 0.0006 0.0006"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="10" />
+        <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      </inertial>
+    </link>
+
+    <joint name="number3_joint" type="fixed">
+      <parent link="button4"/>
+      <child link="number3"/>
+      <origin xyz="0 0 0.07" rpy="0 0.0 0"/>
+    </joint>
+    
+    <gazebo reference="number3">
+      <material>Gazebo/Black</material>
+    </gazebo>
   </xacro:macro>
 
 </robot>

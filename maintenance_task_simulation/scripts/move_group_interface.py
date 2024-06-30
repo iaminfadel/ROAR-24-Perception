@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Python 2/3 compatibility imports
+Python 2/3 compatibility imports
 from __future__ import print_function
 from six.moves import input
 

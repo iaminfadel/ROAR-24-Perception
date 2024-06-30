@@ -39,13 +39,109 @@
         <joint name="joint_5" value="0"/>
         <joint name="joint_6" value="0"/>
     </group_state>
-    <group_state name="pick" group="arm_group">
+    <group_state name="construct_1" group="arm_group">
         <joint name="joint_1" value="0"/>
         <joint name="joint_2" value="-0.7162"/>
         <joint name="joint_3" value="1.6892"/>
         <joint name="joint_4" value="-2.4271"/>
         <joint name="joint_5" value="0"/>
         <joint name="joint_6" value="0"/>
+    </group_state>
+        <group_state name="construct_2" group="arm_group">
+        <joint name="joint_1" value="-0.2967059728"/>
+        <joint name="joint_2" value="-0.6981317008 "/>
+        <joint name="joint_3" value="1.7976891296"/>
+        <joint name="joint_4" value="- 2.5132741229"/>
+        <joint name="joint_5" value="0"/>
+        <joint name="joint_6" value="-0.2967059728"/>
+    </group_state>
+    <group_state name="pick_1st_brick" group="arm_group">
+        <joint name="joint_1" value="-1.710422667"/>
+        <joint name="joint_2" value="-0.8203047484"/>
+        <joint name="joint_3" value="1.6755160819"/>
+        <joint name="joint_4" value="-2.5132741229"/>
+        <joint name="joint_5" value="0"/>
+        <joint name="joint_6" value="0"/>
+    </group_state>
+    <group_state name="pre_2nd_brick" group="arm_group">
+        <joint name="joint_1" value="-0.2967059728"/>
+        <joint name="joint_2" value="-0.5235987756"/>
+        <joint name="joint_3" value="1.5882496193"/>
+        <joint name="joint_4" value="-2.1118483949"/>
+        <joint name="joint_5" value="0"/>
+        <joint name="joint_6" value="0.8203047484"/>
+    </group_state>
+    <group_state name="pick_2nd_brick" group="arm_group">
+        <joint name="joint_1" value="-1.9373154697"/>
+        <joint name="joint_2" value="-1.0646508437"/>
+        <joint name="joint_3" value="1.1868238914"/>
+        <joint name="joint_4" value="-2.2514747351"/>
+        <joint name="joint_5" value="-0.0174532925"/>
+        <joint name="joint_6" value="0.3490658504"/>
+    </group_state>
+    <group_state name="pre_3rd_brick" group="arm_group">
+        <joint name="joint_1" value="-0.7330382858 "/>
+        <joint name="joint_2" value="-0.5934119457"/>
+        <joint name="joint_3" value="1.5882496193"/>
+        <joint name="joint_4" value="-2.181661565"/>
+        <joint name="joint_5" value="-0.0523598776"/>
+        <joint name="joint_6" value="3.2463124087"/>
+    </group_state>
+    <group_state name="pick_3rd_brick" group="arm_group">
+        <joint name="joint_1" value="-2.2863813201"/>
+        <joint name="joint_2" value="-1.0122909662 "/>
+        <joint name="joint_3" value="1.2566370614"/>
+        <joint name="joint_4" value="-2.2863813201"/>
+        <joint name="joint_5" value="-0.0174532925"/>
+        <joint name="joint_6" value="0.5585053606"/>
+    </group_state>
+    <group_state name="pre_4th_brick" group="arm_group">
+        <joint name="joint_1" value="-0.1047197551 "/>
+        <joint name="joint_2" value="-1.0471975512"/>
+        <joint name="joint_3" value="0.7504915784"/>
+        <joint name="joint_4" value="-1.8151424221"/>
+        <joint name="joint_5" value="0"/>
+        <joint name="joint_6" value="-0.1047197551"/>
+    </group_state>
+    <group_state name="pick_4th_brick" group="arm_group">
+        <joint name="joint_1" value="-1.5533430343"/>
+        <joint name="joint_2" value="-1.5533430343"/>
+        <joint name="joint_3" value="0.1570796327"/>
+        <joint name="joint_4" value="-1.7278759595"/>
+        <joint name="joint_5" value="-0.0174532925"/>
+        <joint name="joint_6" value="-0.0523598776"/>
+    </group_state>
+    <group_state name="pre_5th_brick" group="arm_group">
+        <joint name="joint_1" value="0.3665191429 "/>
+        <joint name="joint_2" value="-1.1344640138"/>
+        <joint name="joint_3" value="0.6108652382"/>
+        <joint name="joint_4" value="-1.7627825445"/>
+        <joint name="joint_5" value="0"/>
+        <joint name="joint_6" value="0.9773843811"/>
+    </group_state>
+    <group_state name="pick_5th_brick" group="arm_group">
+        <joint name="joint_1" value="-1.4137166941"/>
+        <joint name="joint_2" value="-0.907571211"/>
+        <joint name="joint_3" value="1.4835298642 "/>
+        <joint name="joint_4" value="-2.4085543678"/>
+        <joint name="joint_5" value="0"/>
+        <joint name="joint_6" value="-0.3316125579"/>
+    </group_state>
+    <group_state name="pre_6th_brick" group="arm_group">
+        <joint name="joint_1" value="-1.0646508437"/>
+        <joint name="joint_2" value="-1.1344640138 "/>
+        <joint name="joint_3" value="0.5934119457"/>
+        <joint name="joint_4" value="-1.745329252"/>
+        <joint name="joint_5" value="0"/>
+        <joint name="joint_6" value="-0.9424777961"/>
+    </group_state>
+    <group_state name="pick_6th_brick" group="arm_group">
+        <joint name="joint_1" value="-2.1118483949"/>
+        <joint name="joint_2" value="-1.4660765717"/>
+        <joint name="joint_3" value="0.3490658504"/>
+        <joint name="joint_4" value="-1.8151424221"/>
+        <joint name="joint_5" value="-0.0174532925"/>
+        <joint name="joint_6" value="-0.6108652382"/>
     </group_state>
     <group_state name="place" group="arm_group">
         <joint name="joint_1" value="-1.7143"/>
